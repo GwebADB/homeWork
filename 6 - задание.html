@@ -1,0 +1,32 @@
+<meta charset="utf-8">
+<script>
+
+	function mathOperation(arg1, arg2, operation){
+		switch (operation){
+			case "+": {
+				alert(arg1 + arg2); 
+				break
+			}
+			case "-": {
+				alert(arg1 - arg2); 
+				break
+			}
+			case "/": {
+				alert(arg1 / arg2); 
+				break
+			}
+			case "*": {
+				alert(arg1 * arg2); 
+				break
+			}
+			default: alert("Plese enter operator")
+		}
+	};
+
+	var arg1 = parseInt(prompt("Please, enter number one: ")), arg2 = parseInt(prompt("Please, enter number two: ")), operation = prompt("Please, enter operation ");
+
+	mathOperation(arg1, arg2, operation);
+
+//доработки описаны в 5 задании
+
+</script>

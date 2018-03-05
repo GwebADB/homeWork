@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script>
+	function powerVariantOne(val, pow) {
+		if (pow != 1){
+			return val * powerVariantOne(val, pow - 1)
+		} else 
+			return val
+	};
+
+	function powerVariantTwo(val, pow) {
+		if (pow==1) {
+			return val
+		} 
+			return val * powerVariantTwo(val, pow - 1);
+	};
+
+	var val = parseInt(prompt("Please enter number: ")), pow = parseInt(prompt("Please enter power: "));
+
+	alert(powerVariantOne(val, pow));
+	alert(powerVariantTwo(val, pow));
+
+</script>
