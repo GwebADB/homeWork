@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<script>
+	var a = 0;
+
+function writeNumber(a) {
+	do{
+		if(a == 0){
+			console.log(a + "- это ноль");
+			a++
+		} else if (a % 2 == 0) {
+			console.log(a + "- это четное число");
+			a++;
+			continue
+		} console.log(a + "- это нечетное число");
+		a++
+	}
+	while (a <= 10);
+};
+
+writeNumber(a);
+
+</script>
+
