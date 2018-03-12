@@ -1,0 +1,61 @@
+<script>
+var q1 = {q: "Вопрос 1\n",
+            a1: "ответ 1\n",
+            a2: "ответ 2\n",
+            a3: "ответ 3\n",
+            a4: "ответ 4\n",
+            correctA: 1
+        },
+q2 = {q: "Вопрос 1\n",
+            a1: "ответ 1\n",
+            a2: "ответ 2\n",
+            a3: "ответ 3\n",
+            a4: "ответ 4\n",
+            correctA: 1
+        },
+q3 = {q: "Вопрос 1\n",
+            a1: "ответ 1\n",
+            a2: "ответ 2\n",
+            a3: "ответ 3\n",
+            a4: "ответ 4\n",
+            correctA: 1
+        };
+
+// Принцип игры:
+//инициализировать переменную для подсчета правильных и не правильных ответов.
+var pravilniiOtvet, nePravilniiOtvet;
+var event;
+
+//вывести первый вопрос.Вывод вопросов сделать через функцию, в функцию передавать номер вопроса. Номер вопроса чередовать через цикл
+
+event = +prompt(q1.q + q1.a1 + q1.a2 + q1.a3 + q1.a4 + '-1 - Выход из игры');
+
+//ответ сравнивать с правильным ответом. Добавить правильный или неправильный. Вывести результат
+function proverkaOtveta (event) {
+    if (event == this.correctA) {
+        pravilniiOtvet++;
+        alert ("правильный ответ")
+    } nePravilniiOtvet++;
+    var ostatokOwibok = 3 -nePravilniiOtvet;
+    alert ("Неправильный ответ. Осталось попыток" + ostatokOwibok);
+}
+
+//посчитать кол-во неправильных ответов. Если больше 3 ответов не правильно конец игры
+if (nePravilniiOtvet == 3) {
+    alert("Конец игры" + symmaVigrisha(pravilniiOtvet))
+} функция вывода вопроса
+
+//вывести сл вопрос
+
+//вывести сумму выигрыша
+function symmaVigrisha(pravilniiOtvet) {
+    if (pravilniiOtvet < 5) {
+        alert ("Выигрыш 0")
+    } else if (pravilniiOtvet >= 5 & pravilniiOtvet < 10) {
+        alert ("Выигрыш 100 000")
+    } else if (pravilniiOtvet >= 10 & pravilniiOtvet < 15) {
+        alert ("Выигрыш 500 000")
+    }   alert ("Выигрыш 1 000 000")
+}
+
+</script>

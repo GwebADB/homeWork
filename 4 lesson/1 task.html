@@ -1,0 +1,28 @@
+<meta charset="utf-8">
+<script>
+
+function numToObj (number) {
+	var arrNumber = number.split('');
+	while (arrNumber.length < 3)
+    {
+    	arrNumber.unshift(0);
+    }
+    var objNumber = {};
+    if (arrNumber.length > 3) {
+    	console.log (null);
+    }
+    else {
+    	objNumber['сотни'] = +arrNumber[0]; 
+    	objNumber['десятки'] = +arrNumber[1]; 
+    	objNumber['единицы'] = +arrNumber[2];
+        console.log (objNumber);
+    }
+}
+
+var number = prompt("Please, enter number: ");
+numToObj (number);
+
+
+    //разбить и вывести объект сотни, десятки, единицы. Если больше 999 выдать пустой объект
+</script>
+
