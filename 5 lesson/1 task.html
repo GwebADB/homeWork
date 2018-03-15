@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>1 task</title>
+</head>
+<body>
+
+<script>
+
+function table(rows, cols, color1, color2, size) { 
+  var table = document.createElement('TABLE');
+  document.body.appendChild(table);
+  var tr = document.createElement('TR');
+  var td = document.createElement('TD');
+  td.style.width = size + 'px';
+  td.style.height = size + 'px';
+  for (var i = 0; i < rows; i++) {
+    table.appendChild(tr.cloneNode(true));
+    for (var j = 0; j < cols; j++) {
+      var _tr = table.getElementsByTagName('TR')[i];
+      _tr.appendChild(td.cloneNode(true));
+      var _td = table.getElementsByTagName('TR')[i].getElementsByTagName('TD')[j];
+      _td.style.backgroundColor = ((i%2==0 && j%2==0) || i%2==1 && j%2==1) ? color2 : color1;
+    }
+  }
+}
+table(8, 8, 'white', 'black', 50);
+
+/* Задание
+ Создать функцию, генерирующую шахматную доску. При этом можно использовать любые html-теги по своему желанию. Доска должна быть разлинована соответствующим образом, т.е.
+чередовать черные и белые ячейки. Строки должны нумероваться числами от 1 до 8, столбцы
+– латинскими буквами A, B, C, D, E, F, G, H.
+
+Принцип
+1) задать всему документы ид шахматнаяДоска
+2) создать через цикл 100 элементов
+3) закрасить через цикл если элемент больше 10 и не чет то черный
+4) 
+функция заполнения -  через цикл заполнить буквами - если элемент в диапозоне от 1 до 10 заполнить цифрами
+*/
+</script>
+
+</body>
+</html>
+

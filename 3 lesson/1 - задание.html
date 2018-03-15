@@ -1,6 +1,52 @@
 <meta charset="utf-8">
 <script>
+    "use strict";
+    var i = 2;
+    /*while (i<=100){
+        for(var j=2; j<=i; j++){
+            if (i%j == 0) {
+                break;
+            }
+        }
+        if(j==i) {
+            console.log(i);
+        }
+        i++;
+    }*/
+    while (i<=100){
+        var j=2;
+        while(j<=i){
+            if (i%j == 0) {
+                break;
+            }
+            j++;
+        }
+        if(j==i) {
+            console.log(i);
+        }
+        i++;
+    }
 
+/*
+var num = 2;
+while (num <= 100) {
+	if (isSimple(num)) {
+	document.write(num + " ");
+	)
+	num ++;
+}
+
+function isSimple(number) {
+	var i = 2;
+	while (i < number) {
+		if (number % i == 0) {
+			return false;
+		}
+		i++;
+	}
+	return true;
+}
 
 </script>
+
 
